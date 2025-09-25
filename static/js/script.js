@@ -157,8 +157,8 @@ function renderProducts(products) {
     const btnDettagli = document.createElement("button");
     btnDettagli.textContent = "Dettagli";
     btnDettagli.addEventListener("click", () => {
-      divDetails.style.display =
-        divDetails.style.display === "none" ? "block" : "none";
+      divDetails.style.display = divDetails.style.display === "none" ? "block" : "none";
+      btnDettagli.textContent = btnDettagli.textContent === "Dettagli" ? "Chiudi Dettagli" : "Dettagli";
     });
 
     // Bottone preferiti
@@ -188,15 +188,21 @@ function renderProducts(products) {
       saveCart(carrello);
       aggiornaCarrelloUI();
     });
+    const divBtn = document.createElement("div");
+    divBtn.className = "div-btn";
+    divBtn.appendChild(btnDettagli);
+    divBtn.appendChild(btnFav);
+    divBtn.appendChild(btnCarrello);
+    
 
     div.appendChild(title);
     div.appendChild(imgMain);
     div.appendChild(price);
     div.appendChild(rating);
-    div.appendChild(btnDettagli);
+    div.appendChild(divBtn);
     div.appendChild(divDetails);
-    div.appendChild(btnFav);
-    div.appendChild(btnCarrello);
+    
+    
 
     container.appendChild(div);
   });

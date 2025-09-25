@@ -95,9 +95,9 @@ section {
   height: 200px;
 }
 
-.prodotto-actions{
+.div-btn{
   margin-top: auto;
-  width: 50%;
+  width: 40%;
   text-align: center;
 }
 
@@ -109,6 +109,7 @@ section {
   border-radius: 4px;
   background-color: #4CAF50;
   color: white;
+  margin-bottom: 12px;
 }
 
 .prodotto button:hover {
@@ -116,7 +117,10 @@ section {
 }
 
 /* Dettagli prodotti */
-
+.prodotto-dettagli {
+  text-align: center;
+  margin-top: 20px;
+}
 .prodotto-dettagli img {
   max-width: 100%;
   margin-top: 5px;
@@ -125,8 +129,8 @@ section {
 
 .prodotto-dettagli button{
   text-align: center;
-  margin-left: 12px;
-  margin-right: 12px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 /* Carrello */
