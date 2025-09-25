@@ -1,0 +1,253 @@
+/* Reset base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 20px;
+}
+
+/* Header e navigazione */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+/* Sezioni */
+section {
+  margin-bottom: 40px;
+}
+
+/* Form ricerca e categorie */
+#search {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+#cerca input[type="text"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+#categories-form {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+#categories-form label {
+  margin-right: 10px;
+}
+
+/* Lista prodotti */
+#prodotti {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 60px;
+}
+
+.prodotto {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.prodotto img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  height: 200px;
+}
+
+.prodotto-actions{
+  margin-top: auto;
+  width: 50%;
+  text-align: center;
+}
+
+.prodotto button {
+  padding: 5px 10px;
+  margin-top: 12px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.prodotto button:hover {
+  background-color: #45a049;
+}
+
+/* Dettagli prodotti */
+
+.prodotto-dettagli img {
+  max-width: 100%;
+  margin-top: 5px;
+  display: block;
+}
+
+.prodotto-dettagli button{
+  text-align: center;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+/* Carrello */
+#carrello {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+#carrello h2 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#carrello ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+#carrello li {
+  background-color: #fff;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  transition: box-shadow 0.2s ease;
+}
+
+#carrello li:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#carrello li .item-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+}
+
+#carrello li input[type="number"] {
+  width: 40px;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+
+}
+
+#carrello button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#carrello button:hover {
+  background-color: #d32f2f;
+}
+
+#carrello #carrello-totale {
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: right;
+  margin-top: 15px;
+}
+
+/* Form pagamento */
+#checkout form {
+  margin-top: 20px;
+  max-width: 800px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#checkout form div {
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+#checkout form label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+#checkout form input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+#checkout form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#checkout form button:hover {
+  background-color: #45a049;
+}
+
+#error-msg {
+  margin-top: 10px;
+}

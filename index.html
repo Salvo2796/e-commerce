@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav aria-label="Navigazione principale del sito">
+            <ul>
+                <li><a href="#home" aria-label="Vai alla home">Home</a></li>
+                <li><a href="#cerca" aria-label="Cerca prodotti">Cerca</a></li>
+                <li><a href="#prodotti" aria-label="Visualizza prodotti">Prodotti</a></li>
+                <li><a href="#carrello" aria-label="Visualizza carrello">Carrello</a></li>
+                <li><a href="#checkout" aria-label="Vai alla pagina di pagamento">Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="cerca" aria-label="Sezione di ricerca prodotti">
+        <input type="text" id="search" placeholder="Cerca prodotti..." aria-label="Cerca prodotti">
+        <form id="categories-form" aria-label="Filtra prodotti per categoria">
+            <p>Categoria</p>
+        </form>
+    </section>
+
+    <section id="prodotti" aria-label="Elenco dei prodotti disponibili">
+
+    </section>
+
+    <section id="carrello" aria-label="Sezione carrello">
+        <h2>Carrello</h2>
+        <ul id="lista-carrello" aria-label="Lista degli articoli nel carrello"></ul>
+        <p id="carrello-totale" aria-live="polite">Totale: 0 €</p>
+    </section>
+
+    <section id="checkout" aria-label="Sezione pagamento">
+        
+        <form id="payment-form" aria-label="Modulo di pagamento">
+            <h2>Pagamento</h2>
+            <div>
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Mario Rossi" required aria-required="true" aria-label="Inserisci il nome completo">
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="esempio@email.com" required aria-required="true" aria-label="Inserisci la tua email">
+            </div>
+
+            <div>
+                <label for="card">Numero carta</label>
+                <input type="text" id="card" name="card" placeholder="1234567812345678" required aria-required="true" aria-label="Inserisci il numero della carta di credito">
+            </div>
+
+            <div>
+                <label for="expiry">Scadenza (MM/AA)</label>
+                <input type="text" id="expiry" name="expiry" placeholder="12/25" required aria-required="true" aria-label="Inserisci la scadenza della carta">
+            </div>
+
+            <div>
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="123" required aria-required="true" aria-label="Inserisci il codice CVV della carta">
+            </div>
+
+            <div>
+                <button type="submit" aria-label="Paga ora con la carta inserita">Paga ora</button>
+            </div>
+        </form>
+        <p id="error-msg" style="color:red;" aria-live="assertive"></p>
+    </section>
+
+    <script src="/static/js/script.js" type="module"></script>
+</body>
+
+</html>
